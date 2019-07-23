@@ -1,51 +1,49 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
-
-
 .content {
-  position: absolute;
-  text-align: center;
-  color: white;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-    font-family: cursive;;
+    position: absolute;
+    color:crimson;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10;
+    display: flex;
+    align-items: center;
+    margin-top: 300px;
+    flex-direction: column;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #ffffff96;
+    filter: alpha(opacity=0.8);
     font-size: 25px;
-
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.hai {
+    text-align: center;
+    color: midnightblue;
+    font-family: stencil;
+    font-size: 40px;
+    font-weight: 900;
+    overflow: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div:first-of-type {
+    animation: showup 7s infinite;
 }
-
-.App-link {
-  color: #61dafb;
+div:last-of-type span {
+    animation: slidein 7s infinite;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes showup {
+    20% {
+        opacity: 15;
+    }
+    100% {
+        opacity: 5;
+    }
+}
+@keyframes slidein {
+    0% {
+        margin-left: -1000px;
+    }
+    50% {
+        margin-left: 0px;
+    }
 }

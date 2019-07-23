@@ -1,34 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import '../App.css';
-
-
- 
-class Abc extends Component {
-  render () {
-
+class Background extends Component {
+  render() {
     return (
-    
-    
-  <div>
-
-    
-<div class="content">
-  <h1>video background is the new cool thing..</h1>
-  
- <h1> would you like it on your website?</h1>
- 
-  </div>
-
- 
-
-<video src={require(`../asset/web.mp4`)} loop autoPlay width="1920" height="1080" />
-
-
-</div>
-  
+      <div class="first">
+        <div class="content">
+          <h1><b><i>videobackground is the new cool thing...</i> </b> </h1> <br></br>
+          <div className="hai"><h3><span><b> would you like it on your website? </b></span></h3></div>
+        </div>
+        <video autoPlay muted loop src={require(`../asset/wow.mp4`)} width="1920" height="1080" fluid />
+      </div>
     )
   }
 }
-export default Abc
-
-
+export default Background
