@@ -1,14 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import Background from './component/video'
+import Background from './component/background_video';
+import ContactPage from './component/contact_page';
+import Slideshow from './component/image_slide';
+import Login from './component/login_page';
+
+
 import './App.css';
+
 
 function App() {
   return (
-   <div>
-    <Background>
-      </Background> 
-   </div>
+   
+    
+       
+    
+      <div className="App">
+      <Background />
+      <div className="alignment">
+        <Slideshow/>
+        </div>
+        <div className="bg_img">
+          <Login></Login>
+          </div>
+        <div className="App-background">
+          <ContactPage/>
+        </div>
+       
+      </div>
   )
 }
 export default App;

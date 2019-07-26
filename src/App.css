@@ -1,49 +1,357 @@
-.App {
-    text-align: center;
-}
+
+
+
+/* text properties are mentioned here */
 .content {
     position: absolute;
-    color:crimson;
+    color:white;
     top: 0;
     left: 0;
     right: 0;
     bottom: 10;
     display: flex;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 250px;
     flex-direction: column;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: #ffffff96;
-    filter: alpha(opacity=0.8);
+    font-family: Sans-serif;
     font-size: 25px;
 }
-.hai {
-    text-align: center;
-    color: midnightblue;
-    font-family: stencil;
-    font-size: 40px;
-    font-weight: 900;
-    overflow: hidden;
+
+/* animation of second and third fonts bye using key frame methord */
+.item-2, 
+.item-3 {
+	position: center;
+  display: block;
+	top: 1em;
+  width: 50%;
+  text-align: center;
+  font-size: 2em;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
 }
-div:first-of-type {
-    animation: showup 7s infinite;
+.item-2{
+  animation-name: anim-2;
+  font-family: Stencil Std, fantasy;      /*font style and animation */
 }
-div:last-of-type span {
-    animation: slidein 7s infinite;
+.item-3{
+	animation-name: anim-3;
 }
-@keyframes showup {
-    20% {
-        opacity: 15;
-    }
-    100% {
-        opacity: 5;
-    }
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }    /*animation functions */
 }
-@keyframes slidein {
-    0% {
-        margin-left: -1000px;
-    }
-    50% {
-        margin-left: 0px;
-    }
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
 }
+.item-1 {
+	-webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;      /*animation of first fonts */
+          animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+          font-size: 40px;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes tracking-in-contract-bck-top {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(-300px);
+            transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-top {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(-300px);
+            transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+ .bg_video{                             /* video effects /transperency/filters & britness mentioned here */
+  
+  min-width: 100% !important;
+  max-height: 100% !important;
+  z-index: -1000;
+  
+  object-fit: fill;
+  filter: brightness(18%);
+-webkit-filter: brightness(18%);
+-moz-filter: brightness(18%);
+ }
+
+
+
+
+
+ .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.App {
+  text-align: center;
+}
+/* css for heading text*/
+.header_text{
+  color:white;
+  font-size: 50px;
+  padding-top: 8%;
+  margin-top: 5%;
+}
+/*tag line text css*/
+.tagline_text{
+  font-size: 2%;
+  color: gold;
+  font-size:30px;
+  padding-top:2%;
+  font-weight: bolder;
+  padding-bottom:2%;
+}
+/* TextFeild styling*/
+.input_box{
+  width: 20%;
+  float: left;
+  margin-left:25%;
+  margin-top: 2%; 
+}
+/* seperated styling for message box*/
+.message_box{
+  float:left;
+  margin-left:-2%;
+  margin-top: 2%; 
+}
+/* common button styling */
+.button {
+  background-color:deepskyblue;
+  border: none;
+  color: white;
+  padding-top:50px;
+  padding-left:35px;
+  padding-right:35px;
+  padding-bottom:50px;
+  margin-right:60;
+  text-align: center;
+  font: bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius:50%;
+  margin-top: 97px;
+  margin-right: 25%;
+  border-radius:50%;
+  margin-top: 97px;
+  margin-right: 25%;
+}
+.App-background{
+  background-image: url("../src/images/contact_blured_city.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+/* Addind style to get transperent input box*/
+.input_box_background{
+  background-color:#CBCAC9;
+  opacity: .4;
+  color: aliceblue;
+}
+
+
+
+
+
+/*image slider css components */
+/*align ment adujested*/
+.alignment {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.slide-container 
+{
+  width: 100%;
+  margin: auto; 
+}
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 1000px;
+  color:rgb(143, 4, 4);
+  font-family: cursive;
+}
+/* frist image alteration */
+.each-slide span{
+  padding-bottom: 10%;
+  padding-left: 55%;
+  font-size: 50px;
+  color:white;
+}
+/* second image alteration */
+.each-slide span-1 {
+  padding-top: 10%;
+  padding-right:55%;
+  font-size: 50px;
+  color:rgb(231, 20, 20);
+}
+/* third image alteration */
+.each-slide span-2 {
+  padding-top: 5%;
+  padding-left: 55%;
+  font-size: 50px;
+  color: rgb(226, 43, 217); 
+}
+
+
+
+
+
+
+
+
+
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-link {
+  color: #61dafb;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.bg_img {
+  background-image: url("../src/images/imgg.jpg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.textfield{
+  padding-right: 30px;
+  padding-left:30px;
+}
+.buttons{
+padding-top: 4px;
+  width: 98%;
+  background-color: #4CAF50;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  font-size: 75%;
+  font-family: 'Roboto', sans-serif; 
+    height: 50%;
+}
+.socialb{
+  font-size: 10%;
+}
+.links{
+  padding-top: 30px;
+}
+.login_box{
+  padding-left: 670px;
+}
+.textstyle{
+  float: left;
+  padding-top: 150px;
+  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+.main{
+  margin-bottom: 55%; 
+  margin-top: 35%;
+  width:400px;
+  height: 560px;
+  background-color: white;
+  background-size: cover;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.label{
+color: black;
+padding-right: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+   
